@@ -5,9 +5,9 @@
 <p><%=home %></p>
 
 <% console.log(postText); %>
-<% postText.forEach(function(post) { %>
-   <h1><%= post.title %></h1>
-   <p><%= post.details.substring(0, 100)%>... <a href="/post/<%= _.lowerCase(post.title)%>">Read more</a></p>
+<% postText.forEach(function(posts) { %>
+   <h1><%= posts.title %></h1>
+   <p><%= posts.content.substring(0, 100)%>... <a href="/post/<%= posts._id%>">Read more</a></p>
 <% }); %>
 
 
